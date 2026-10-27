@@ -1,0 +1,20 @@
+/dts-v1/;
+#include "bcm2837-rpi-zero-2-w.dts"
+
+/ {
+    uart0-from-scratch {
+        compatible = "pad_scratch,pl011-uart";
+        reg = <0x7e201000 0x200>;
+        interrupts = <2 25>;
+        clocks = <&clocks BCM2835_CLOCK_UART>,
+                 <&clocks BCM2835_CLOCK_VPU>;
+        clock-names = "uartclk", "apb_pclk";
+        pinctrl-names = "default";
+        pinctrl-0 = <&uart0_gpio32 &uart0_ctsrts_gpio30>;
+        status = "okay";
+    };
+};
+
+&uart0 {
+    status = "disabled";
+};

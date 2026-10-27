@@ -1,4 +1,4 @@
-# linux-device-model
+# Linux-device-model
 
 After working on EdgeOS (immutable Yocto distribution, A/B updates, SWUpdate and BSP integration on Jetson Orin Nano), I wanted to go one level deeper into how the kernel actually discovers hardware and binds drivers to it.
 
